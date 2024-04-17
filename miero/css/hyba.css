@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+
+#main {
+	position: relative;
+	height: 100vh;
+}
+#main .top {
+	position: fixed;
+	width: 100%;
+}
+#main .top.fixed {
+	background-color: #fff;
+	color: #000;
+	
+}
+#main .top .top_inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 0 6vw;
+	height: 80px;
+	background-color: rgb(241, 156, 81, 0.5);
+}
+#main .top nav {
+	padding-right: 50px;
+}
+#main .top nav ul {
+	display: flex;
+	justify-content: flex-end;
+}
+#main .top nav ul li a {
+	display: block;
+	padding: 0 20px;
+	font-size: 18.5px;
+	color: #fff
+}
+#main .top .tab {
+	position: absolute;
+	right: 6vw;
+	top: 23px;
+}
+#main .keytxt {
+	position: absolute;
+	left: 70%;
+	top: 50vh;
+	transform: translate(-50%, -50%);
+}
+#main .keytxt h2 {
+	font-size: 60px;
+	font-weight: lighter;
+	margin-bottom: 40px
+}
+#main .keytxt strong {
+	font-size: 60px;
+	font-weight: bold;
+}
+#main .keytxt p {
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 180%;
+}
+#main .slider {
+	height: 100%;
+}
+#main .slider img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#sub {
+	padding: 85px 0 200px;
+	background: url(../img/Group\ 1.jpg) no-repeat center center;
+	background-size: cover;
+	overflow-x: hidden;
+}
+#sub .keytxt {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+#sub .keytxt strong {
+	display: block;
+	font-size: 24px;
+	font-weight: bold;
+	color: #ff7b29;
+	margin-bottom: 18px;
+}#sub .keytxt p {
+	font-size: 18px;
+	font-weight: normal;
+}
+#sub .banner {
+	margin: 0 auto;
+	max-width: 1160px;
+	padding-top: 60px;
+	position: relative;
+}
+#sub .banner ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+#sub .banner ul li {
+	width: calc((100% - 50px)/3);
+
+}
+#sub .banner ul li a .img img {
+	width: 100%;
+}
+#sub .banner ul li:nth-child(2){
+	margin-top: 60px;
+}
+
+#sub .banner ul li .txt {
+	position: relative;
+	margin: 0 auto;
+	width: 360px;
+	margin-top: -10px;
+	padding: 30px 20px;
+	width: 85%;
+	background-color: #fff;
+	border: 4px solid #fff;
+
+}
+#sub .banner ul li a .txt span.number {
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	padding: 10px;
+}
+#sub .banner ul li a:hover .txt {
+	border: 4px solid #fa843a ;
+}
+#sub .banner ul li .txt span.number {
+	font-size: 16px;
+	font-weight: 700;
+}
+#sub .banner ul li a:hover .txt span.number {
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	padding: 10px;
+	background-color: #fa843a;
+	box-sizing: border-box;
+	color: #fff;
+}
+#sub .banner ul li .txt h3 {
+	font-size: 19.5px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+#sub .banner ul li .txt h3 span.color {
+	color: #fa843a;
+}
+#sub .banner ul li .txt p {
+	font-size: 13px;
+	color: #aaa;
+}
+#sub .banner .button a {
+	position: absolute;
+	top: 50%;
+}
+#sub .banner .button  a.prev  {
+	left: -100px;
+
+}
+#sub .banner .button a.next {
+	right: -100px;
+}

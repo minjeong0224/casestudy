@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
+	background-color: #98ab9a;
+}
+header {
+	margin: 0 auto;
+	width: 1300px;
+	height: 72px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #eeeeee;
+}
+header .utils ul { 
+	display: flex;
+	gap: 20px;
+}
+header .lang ul {
+	display: flex;
+	gap: 15px;
+}
+header .lang ul li a {
+	display: block;
+	padding: 0 20px;
+	line-height: 32px;
+	color: #d9d9d9;
+	border: 1px solid #cbcbcb;
+	border-radius: 25px;
+}
+header .lang ul li:hover a {
+	background-color: #315127;
+	font-weight: bold;
+}
+/* header .lang ul li a.button_ko {
+	display: block;
+	padding: 0 20px;
+	line-height: 32px;
+	background-color: #fff;
+	border: 1px solid #cbcbcb;
+	border-radius: 25px;
+}
+header .lang ul li a.button_en {
+	display: block;
+	padding: 0 20px;
+	line-height: 32px;
+	color: #d9d9d9;
+	border: 1px solid #cbcbcb;
+	border-radius: 25px;
+} */
+.menu {
+	height: 70px;
+	border-bottom: 1px solid #eeeeee;
+}
+menu .men_inner {
+	position: relative;
+	margin: 0 auto;
+	width: 1300px;
+	height: 65px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#gnb {
+	position: absolute;
+	left: 50%;
+	z-index: 1000;
+	height: 70px;
+	transform: translateX(-50%);
+}
+#gnb > ul {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	gap: 60px;
+} 
+#gnb > ul > li {
+	position: relative;
+}
+#gnb > ul > li > a {
+	display: block;
+	padding: 0 40px;
+	line-height: 70px;
+	white-space: nowrap;
+	font-size: 1.125em;
+	font-weight: normal;
+}
+#gnb li ul {
+	position: absolute;
+	width: 100%;
+}
+
+#gnb > ul > li:hover > a, 
+#gnb > ul > li.active > a {
+	text-decoration: underline 3px;
+	font-weight: bold;
+	color: #0b3600;
+}
+#gnb li ul {
+	display: flex;
+	position: absolute;
+	left: 10px;
+	width: auto;
+	height: 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#gnb li ul.active {
+	height: 65px;
+	transition: height 0.3s;
+}
+#gnb li ul li a {
+	display: block;
+	padding: 0 15px;
+	line-height: 20px;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 1em;
+	font-weight: 600;
+	color: #999;
+}
+#gnb li ul li a:hover,
+#gnb li ul li a:focus {
+	color: #0b3600;
+	text-decoration: underline;
+}
+.menu_bg {
+	position: absolute;
+	left: 0;
+	top: 130px;
+	width: 100%;
+	height: 0;
+	background-color: #edeced;
+	transition: height 0.3s;
+}
+.menu_bg.active {
+	height: 45px;
+}
+
+.container {overflow: hidden;
+}
+#main_slider {
+    position: relative;
+	margin: 0 auto;
+	margin-top: 80px;
+	max-width: 1200px;
+}
+#main_slider .swiper {	
+    width: 100%;
+    height: 100%;
+}
+#main_slider .swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.875em;
+    background-color: #fff;
+}
+#main_slider .swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}	
+#main_slider .controller .next {
+	position: absolute;
+	right: -165px;
+	top: 50%;
+	width: 25px;
+	height: 30px;
+	z-index: 1000;
+	transform: translateY(-40%);
+	background: url(../img/icon_slide_arrow.png) no-repeat 0 0;
+	overflow: hidden;
+	text-indent: -99999px;
+}
+#main_slider .swiper-pagination {
+	position: absolute;
+	right: -57%;
+	left: auto;
+	top: 50%;
+	z-index: 1000;
+	font-size: 1.0625em;
+	transform: translateY(-3%);
+	pointer-events: none;
+}
+#main_slider .text_box {
+	position: absolute;
+	left: -10%;
+	bottom: 0%;
+	height: 300px;
+    padding: 50px 20px;
+    padding-right: 42px;
+	z-index: 1000;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: rgb(126, 140, 128, 0.9);
+	box-sizing: border-box;
+}
+#main_slider .text_box .title h2 {
+	font-size: 50px;
+	font-weight: bold;
+
+}
+#main_slider .text_box .txt {
+	font-size: 18px;
+	font-weight: normal;
+}
+#main_slider .text_box .txt .date {
+	position: absolute;
+	left: 20px;
+	bottom: 30%; /**/
+}
+#main_slider .text_box .more {
+	position: absolute;
+	right: -7%;
+	bottom: 56px;
+	z-index: 1002;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>URBANDECAY</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="CSS/css_2.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+$(function(){
+	$("#gnb > ul > li").hover(
+		function(){
+			$("#gnb > ul").addClass("active");
+		},
+		function(){
+			$("#gnb > ul").removeClass("active");
+		}
+	);
+
+	$("#gnb > ul > li > a").focusin(function(){
+		$(this).parent().addClass("active");
+
+		if($(this).parent().index() === 0){
+			$(".menu").addClass("active");
+		}
+	});
+	let mainSwiper=new Swiper(".mainSwiper", {
+		// speed: 1500,
+		loop: true,
+		autoplay: {
+			delay: 4000
+		},		
+		pagination: {
+			el: "#main_slider .swiper-pagination",
+			clickable: true,
+		},
+	});
+	$("#main_slider .prev").click(function(e){ 
+		e.preventDefault();
+		mainSwiper.slidePrev();
+	});
+	$("#main_slider .next").click(function(e){
+		e.preventDefault();
+		mainSwiper.slideNext();
+	});
+});
+</script>
+
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<div class="top">
+				<div class="sns">
+					<ul>
+						<li><a href=""><img src="images/social_icon1_1.png" alt="social_icon1_1"></a></li>
+						<li><a href=""><img src="images/social_icon2_1.png" alt="social_icon2_1"></a></li>
+						<li><a href=""><img src="images/social_icon3_1.png" alt="social_icon3_1"></a></li>
+					</ul>
+		</div>
+		<div class="mileage"><a href=""><img src="images/satr1.svg" alt="mileage"></a></div>
+		</div>
+
+		<div class="logo"><h1><a href=""><img src="images/logo_2 1.png" alt="logo"></a></h1></div>
+		<div class="utils">
+			<ul>
+				<li><a href="">LOGIN</a></li>
+				<li><a href="">JOIN</a></li>
+				<li><a href="">개인정보취급방침</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="menu">
+		<nav id="gnb">
+			<ul>
+				<li>
+					<a href="">NEW</a>
+					<ul>
+						<li><a href="">ALL NEW</a></li>
+						<li><a href="">NEW COLLECTION</a></li>
+					</ul>
+				</li>
+				<li><a href="">BEST</a>
+					<ul>
+						<li><a href="">SETTING SPRAY</a></li>
+						<li><a href="">24/7 EYELINER</a></li>
+						<li><a href="">24/7 EYE PENCIL</a></li>
+						<li><a href="">VICE LIPSTICK</a></li>
+						<li><a href="">24/7 CONCEALER</a></li>
+						<li><a href="">VEGAN MAKEUP</a></li>
+					</ul>
+				</li>
+				<li><a href="">EYE</a>
+					<ul>
+						<li><a href="">NAKED PALETTES</a></li>
+						<li><a href="">24/7</a></li>
+						<li><a href="">EYE CONCEALER</a></li>
+						<li><a href="">EYESHADOW PRIMER</a></li>
+						<li><a href="">MAKEUP TOOLS</a></li>
+					</ul>
+				</li>
+				<li><a href="">FACE</a>
+					<ul>
+						<li><a href="">STAY NAKED</a></li>
+						<li><a href="">FOUNDATION</a></li>
+						<li><a href="">CONCEALER</a></li>
+						<li><a href="">PRIMER</a></li>
+						<li><a href="">SPRAY & POWDER</a></li>
+						<li><a href="">FACE MAKEUP TOOLS</a></li>
+					</ul>
+				</li>
+				<li><a href="">LIP</a>
+					<ul>
+						<li><a href="">VICE LIP</a></li>
+						<li><a href="">LIPSTICK</a></li>
+						<li><a href="">LIP GLOSS</a></li>
+						<li><a href="">LIP LINERS</a></li>
+					</ul>
+				</li>
+				<li><a href="">Our Moments</a>
+					<ul>
+						<li><a href="">UD X LA SPARKS PARTNERSHIP</a></li>
+						<li><a href="">LOUD & PROUD🌈</a></li>
+						<li><a href="">BEHIND THE SCENES</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+
+
+		<div id="main_slider">
+			<div class="swiper mainSwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/main_1.jpg" alt="main_1"></div>
+					<div class="swiper-slide"><img src="images/main_2.jpg" alt="main_2"></div>
+					<div class="swiper-slide"><img src="images/main_3.jpg" alt="main_3"></div>
+					<div class="swiper-slide"><img src="images/main_4.jpg" alt="main_4"></div>
+				</div>
+			<div class="swiper-pagination"></div>
+			</div>
+			<div class="controller">
+				<ul>
+					<li><a href="" class="prev">previous</a></li>
+					<li><a href="" class="next">next</a></li>
+				</ul>
+			</div>
+		</div> 
+
+<div id="middle">
+	<section>
+		<div class="top">
+			<a href="" class="buttero_img"><img src="images/content_3.png" alt="buttero"></a>
+			<a href="" class="buttero_txt">
+				<div class="inner">
+					<h2>VICE LIP BOND </h2>
+					<span>GLOSSY LONGWEAR LIQUID LIPSTICK</span>
+					<p>Vegan formula: no animal derived ingredients</p>
+					<span class="button">view more</span>
+				</div>
+			</a>
+		</div>
+	
+	<div class="middle">
+		<a href="" class="atclip_txt">
+			<div class="inner">
+				<h2>FOUNDATION</h2>
+				<span>STAY YOU. STAY NAKED.</span>
+				<p>Grab a bottle of our best selling, <br>Stay Naked Foundation!</p>
+				<span class="button">view more</span>
+			</div>
+		</a>
+		<a href="" class="atclip_img"><img src="images/content_4.png" alt="atclip"></a>
+	</div>
+	
+	<div class="bottom">
+		<div class="bottom_L">
+			<a href="" class="heich">
+				<img src="images/content_6.png" alt="heich">
+				<div class="inner">
+					<span>heich blade 17 f/w collection</span>
+					<h2>lookbook</h2>
+					<span class="button">view more</span>
+				</div>
+			</a>
+			<a href="" class="new">
+				<img src="images/new.png" alt="new">
+				<div class="inner">
+					<h2>new</h2>
+					<span>new in this week</span>
+					<span class="button">view more</span>
+				</div>
+			</a>
+		</div>
+		<div class="bottom_R">
+			<a href="" class="sale">
+				<div class="inner">
+					<h2>sale</h2>
+					<span>다양하고 특별한 할인 혜택을 만나보세요.</span>
+					<span class="button">view more</span>
+				</div>
+			</a>
+			<a href="" class="mimic">
+				<img src="images/content_7.png" alt="mimic">
+				<div class="inner">
+					<span>mimicawe 17 f/w</span>
+					<h2>collection</h2>
+					<span class="button">view more</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	</section>
+</div>
+
+<footer>
+	<div class="footer_inner">
+		<div class="address">
+		<p>㈜더블유컨셉코리아 대표자 : 황재익 서울특별시 강남구 테헤란로14길 16, 5층</p>
+		<a href=""><img src="images/private.png" alt="private"></a>
+	</div>
+	<div class="sns_2">
+		<ul>
+			<li><a href=""><img src="images/facebook_ot.png" alt="facebook"></a></li>
+			<li><a href=""><img src="images/blog_ot.png" alt="blog"></a></li>
+			<li><a href=""><img src="images/kakao_ot.png" alt="kakao"></a></li>
+		</ul>
+	</div>
+	<div class="copyright">copyright(c) 2018 W concept all rights reserved.</div>
+	</div>
+</footer>
+
+</div>
+</body>
+</html>

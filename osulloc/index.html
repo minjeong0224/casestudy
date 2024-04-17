@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>오설록</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/css.css">
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+	$(function(){		
+		let mainSwiper=new Swiper(".mainSwiper", {
+			speed: 1000,
+			effecr: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+		loop: true, 
+		autoplay: { 
+			delay: 1500
+		},
+		navigation: {
+			nextEl: ".mainSwiper .next",
+		},
+		pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+		},
+		navigation: {
+        nextEl: ".swiper-button-next",
+		},
+		on: {
+			init: function(){
+				mainCurrent=this.realIndex+1;
+				mainTotal=this.slides.length;
+				$("#main_slider .account .current").text(mainCurrent);
+				$("#main_slider .account .total").text(mainTotal);
+			},
+			slidechangeTransitionEnd: function(){
+				mainCurrent=this.realIndex+1;
+				$("#main_slider .account .current").text(mainCurrent);
+			}
+		}
+		});
+		$("#gnb > ul > li").hover(
+			function(){
+				$("#gnb").addClass("active");
+				$(this).find("ul").addClass("active");
+				$(".menu_bg").addClass("active");
+			},
+			function(){
+				$("#gnb").removeClass("active");
+				$(this).find("ul").removeClass("active");
+				$(".menu_bg").removeClass("active");
+			}
+		);
+	
+		$("#gnb > ul > li > a").focusin(function(){
+			$("#gnb").addClass("active");
+			$(this).parent().addClass("active");
+			$(this).next().addClass("active");
+			$(".menu_bg").addClass("active");
+		});
+
+		
+		$("#main_slider .next").click(function(e){ 
+			e.preventDefault();
+			mainSwiper.slideNext();
+		});
+
+
+	});
+	</script>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<div class="utils">
+			<ul>
+				<li><a href=""><img src="img/icon_tab.png" alt="menu"></a></li>
+				<li><a href=""><img src="img/icon_location.png" alt="location"></a></li>
+				<li><a href=""><img src="img/icon_search.png" alt="search"></a></li>
+			</ul>
+		</div>
+		<div class="logo"><h1><a href=""><img src="img/logo_black.png" alt=""></a></h1></div>
+		<div class="lang">
+			<ul>
+				<li><a href="" class="button_ko">KR</a></li>
+				<li><a href="" class="button_en">EN</a></li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="menu">
+		<div class="men_inner">
+			<nav id="gnb">
+				<ul>
+					<li><a href="">제품</a>
+						<ul>
+							<li><a href="">베스트</a></li>
+							<li><a href="">위클리 베스트</a></li>
+							<li><a href="">베스트</a></li>
+							<li><a href="">녹차/말차</a></li>
+							<li><a href="">발효차/홍차</a></li>
+							<li><a href="">블렌디드티</a></li>
+							<li><a href="">허브티</a></li>
+							<li><a href="">밀크티/아이스티</a></li>
+						</ul>
+					</li>
+	
+					<li><a href="">선물추천</a>
+						<ul>
+							<li><a href="">오설록 추천</a></li>
+							<li><a href="">베스트</a></li>
+							<li><a href="">부담없는 선물</a></li>
+						</ul>
+					</li>
+	
+					<li><a href="">다다일상</a>
+						<ul>
+							<li><a href="">다다일상</a></li>
+							<li><a href="">다다일상 라이트</a></li>
+							<li><a href="">정기배송</a></li>
+							<li><a href="">다다일상 챌린지</a></li>
+							<li><a href="">다다일상 기록</a></li>
+						</ul>
+					</li>
+	
+					<li><a href="">브랜드</a>
+						<ul>
+							<li><a href="">오설록 스토리</a></li>
+							<li><a href="">제주 티뮤지엄</a></li>
+							<li><a href="">매장 소개 및 예약</a></li>
+						</ul>
+					</li>
+			</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="menu_bg"></div>
+
+	<div class="container">
+		<div id="main_slider">
+			<div class="swiper mainSwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/slide_1.png" alt="slide_1">
+					</div>
+					<div class="swiper-slide"><img src="img/slide_2.png" alt="slide_2">
+				</div>
+					<div class="swiper-slide"><img src="img/slide_3.png" alt="slide_3">
+				</div>
+					<div class="swiper-slide"><img src="img/slide_4.png" alt="slide_4">
+				</div>
+					<div class="swiper-slide"><img src="img/slide_5.png" alt="slide_5">
+			</div>
+					<div class="swiper-slide"><img src="img/slide_6.png" alt="slide_6">
+				</div>
+					<div class="swiper-slide"><img src="img/slide_7.png" alt="slide_7">
+			</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>		
+			<div class="controller">
+				<a href="" class="next">next</a>
+			</div>
+			<div class="text_box">
+				<div class="title">
+					<h2>
+						30일 건강 습관 만들기
+					</h2>
+				</div>
+				<div class="txt">
+					<p>
+						오설록 베스트 블렌디드 티 30입으로 <br>
+						커피 대신 차 한 잔의 건강한 습관을 만들어보세요.
+					</p>
+					<p class="date">12.26 - 12.29</p>
+				</div>
+				<div class="more"><a href=""><img src="img/icon_more.png" alt="more"></a></div>
+			</div>
+			
+		</div>
+	</div> 
+
+</div>
+</body>
+</html>

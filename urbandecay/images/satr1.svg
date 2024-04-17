@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="-0.5 -1 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="39" height="38"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-path)">
+    <image id="star" width="38" height="38" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAABPElEQVQ4ja3UvyvvcRTH8QeJhAzKZDWY3EwYbhH5kV93EGVju2UTBqtJ/gCTiVhlVG5Z+QeUDdO9ZbFwRR+dT318+Ph+8nWW9/uc17tn55z3eb9rhtp+K2FzOKx0rLYEqBW7sVYNG0cjJr4DNhPrr2phDRiL/Whk+GXYAFpi34ShamAzOf/TUuswj/UCvSvnL6Cn4OxWAjuIDHfQXCHTenTnYvdYxl5a5j5+4KICLG8XkWkyh296doV+bJeAPCdloQ+XaTB/AQ9YiUF9LgD9xzBW8ZgVim7zDjUFWtLnvx8JRbClgnhqi2VhTfFLZO0s5y/E66gIm82MSFLOJH5iGv8i3oapMrC0hJOYqePwj8L/E/67VuRhnejFGkZwm9Nv4n1uYBAdWTG5may1x6ydf5Bxak/YxGmcv34V8AIs7ixSOmUuSwAAAABJRU5ErkJggg=="/>
+  </g>
+</svg>
